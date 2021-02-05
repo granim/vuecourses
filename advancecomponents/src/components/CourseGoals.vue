@@ -1,0 +1,20 @@
+<template>
+  <ul>
+    <li v-for="goal in goals" :key="goal">
+      <slot :item="goal" anotherprop="..."></slot>
+    </li>
+  </ul>
+</template>
+
+<script>
+    export default {
+        data () {
+            return {
+                goals: ['Finish the course', 'learn VUe']
+            }
+        }
+    }
+</script>
+
+<style scoped>
+</style>
